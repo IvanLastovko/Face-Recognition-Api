@@ -29,7 +29,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.get('/', (req, res) => res.send(postgres.users));
+app.get('/', (req, res) => res.send('it is working'));
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, postgres, bcrypt) });
 app.post('/register', (req, res) => { register.handleRegister(req, res, postgres, bcrypt) });
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, postgres) });
